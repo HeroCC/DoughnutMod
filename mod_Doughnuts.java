@@ -71,7 +71,7 @@ public void load()
 		ChocolateBar.iconIndex = ModLoader.addOverride("/gui/items.png", "/herocc/Doughnuts/ChocolateBar.png");
 		
 		/* Adds Recipe */
-		ModLoader.addRecipe( new ItemStack( DoughnutNormal, 2), new Object [] {
+		ModLoader.addRecipe( new ItemStack( ChocolateBar, 2), new Object [] {
 			"  B", "  M", "  S", Character.valueOf('B'), new ItemStack(Item.dyePowder, 1, 0), Character.valueOf('M'), Item.bucketMilk, Character.valueOf('S'), Item.sugar
 			});
 		
