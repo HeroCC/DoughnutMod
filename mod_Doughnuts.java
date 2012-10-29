@@ -2,12 +2,13 @@ package net.minecraft.src;
 import java.util.Random;
 public class mod_Doughnuts extends BaseMod
 {
-	/* Defines / adds the items */ 
+	/* Defines and adds the items */ 
 	public static final Item DoughnutNormal = new ItemFood(500, 1, 1F, false).setItemName("Normal Doughnut");
 	public static final Item Popcorn = new ItemFood(501, 3, 5F, false).setItemName("Popcorn");
 	public static final Item Sprinkles = new Item(502).setItemName("Sprinkles");
 	public static final Item DoughnutSprinkled = new ItemFood(503, 3, 3F, false).setItemName("Sprinkled Doughnut");
 	public static final Item ChocolateBar = new ItemFood(504, 0, 3F, false).setItemName("Bar of Chocolate");
+	public static final Item DoughnutChocolate = new ItemFood(505, 3, 3F, false).setItemName("Chocolate Doughnut");
 
 public void load()
 {
@@ -65,7 +66,7 @@ public void load()
 		ModLoader.addName(DoughnutSprinkled, "Sprinkled Doughnut");
 		{
 		}
-		/* Chocolate Doughnut*/
+		/* Chocolate Bar*/
 		{
 		/* Adds the image */
 		ChocolateBar.iconIndex = ModLoader.addOverride("/gui/items.png", "/herocc/Doughnuts/ChocolateBar.png");
@@ -78,10 +79,24 @@ public void load()
 		/* Name we see */
 		ModLoader.addName(ChocolateBar, "Bar of Chocolate");
 		}
+		/* Chocolate Doughnut*/
+		{
+		/* Adds the image */
+		DoughnutChocolate.iconIndex = ModLoader.addOverride("/gui/items.png", "/herocc/Doughnuts/ChocolateDoughnut.png");
+		
+		/* Adds Recipe */
+		ModLoader.addShapelessRecipe(new ItemStack(DoughnutChocolate, 1), new Object[]{ ChocolateBar, DoughnutNormal });
+		
+		/* Name we see */
+		ModLoader.addName(DoughnutChocolate, "Chocolate Doughnut");
+		}
 	}
 }
 public String getVersion()
 {
-	return "Mod: 1.1, MC: 1.3.2";
+	return "Mod: 1.2, MC: 1.3.2";
 }
 }
+/* © HeroCC */
+/* If you are seeing this you must want to code for Doughnut Mod. You may only distribute this on your forked GitHub Resposotory */
+/* This is whatever I save so it may not always work */
