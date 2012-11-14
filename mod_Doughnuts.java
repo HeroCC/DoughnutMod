@@ -9,13 +9,26 @@ public class mod_Doughnuts extends BaseMod
 	public static final Item DoughnutSprinkled = new ItemFood(503, 3, 3F, false).setItemName("Sprinkled Doughnut");
 	public static final Item ChocolateBar = new ItemFood(504, 0, 3F, false).setItemName("Bar of Chocolate");
 	public static final Item DoughnutChocolate = new ItemFood(505, 3, 3F, false).setItemName("Chocolate Doughnut");
+	public static final Item Taco = new ItemFood(506, 3, 3F, false).setItemName("Taco");
 
 public void load()
 {
-	{
 		/* Secret items */
+	{
+		/*Tacos!*/
 		{
+			Popcorn.iconIndex = ModLoader.addOverride("/gui/items.png", "/herocc/Doughnuts/Taco.png");
+			
+			/* Adds Recipe */
+			ModLoader.addRecipe( new ItemStack( Popcorn, 1), new Object [] {
+				"XXX", "WWW", "WWW", Character.valueOf('W'), Item.wheat, Character.valueOf('X'), Item.seeds, Character.valueOf('B'), Item.ingotGold,
+				});
+			
+			/* Name we see */
+			ModLoader.addName(Taco, "Taco");		
+		}
 			/* PopCorn */
+		{
 			Popcorn.iconIndex = ModLoader.addOverride("/gui/items.png", "/herocc/Doughnuts/Popcorn.png");
 			
 			/* Adds Recipe */
@@ -97,6 +110,6 @@ public String getVersion()
 	return "Mod: 1.2, MC: 1.3.2";
 }
 }
-/* © HeroCC */
+/* ï¿½ HeroCC */
 /* If you are seeing this you must want to code for Doughnut Mod. You may only distribute this on your forked GitHub Resposotory */
 /* This is whatever I save so it may not always work */
