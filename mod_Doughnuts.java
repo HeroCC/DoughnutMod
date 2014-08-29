@@ -1,5 +1,7 @@
 package net.minecraft.src;
+
 import java.util.Random;
+
 public class mod_Doughnuts extends BaseMod
 {
 	/* Defines and adds the items */ 
@@ -107,7 +109,7 @@ public void load()
 }
 public String getVersion()
 {
-	return "Mod: 1.2, MC: 1.3.2";
+	return "Mod: 1.2, MC: 1.7.2";
 }
 }
 /* � HeroCC */
